@@ -1,0 +1,41 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-questions-table
+      author: solomia
+      changes:
+        - createTable:
+            tableName: questions
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: question
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: short_answer
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: full_answer
+                  type: text
+                  constraints:
+                    nullable: false
+              - column:
+                  name: language
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: is_deleted
+                  type: boolean
+                  constraints:
+                    nullable: false
+                  defaultValue: "false"
