@@ -39,7 +39,10 @@ public class SecurityConfig {
                         auth -> auth
                                 .requestMatchers("/auth/**",
                                         "/swagger-ui/**",
-                                        "/v3/api-docs/**"
+                                        "/v3/api-docs/**",
+                                        "/questions/eng",
+                                        "/questions/ukr",
+                                        "/questions/deu"
                                 )
                                 .permitAll()
                                 .anyRequest()
@@ -57,4 +60,5 @@ public class SecurityConfig {
     ) throws Exception {
         return authenticationConfiguration.getAuthenticationManager();
     }
+
 }

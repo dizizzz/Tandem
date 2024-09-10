@@ -1,0 +1,14 @@
+databaseChangeLog:
+  - changeSet:
+      id: insert-admin-user
+      author: solomia
+      changes:
+        - insert:
+            tableName: users
+            columns:
+              - column: { name: "email", value: "admin@gmail.com" }
+              - column: { name: "password", value: "$2a$12$BYfeO.ifGcmEY2.cieljD.9NjuUPSPSQjYqXqpGD.H90kLYQuVxga" }
+              - column: { name: "first_name", value: "Jon" }
+              - column: { name: "last_name", value: "Admin" }
+              - column: { name: "role_id", valueNumeric: (SELECT id FROM roles WHERE name = 'ADMIN') }
+              - column: { name: "is_deleted", valueBoolean: false }

@@ -15,12 +15,12 @@ databaseChangeLog:
                     nullable: false
               - column:
                   name: question
-                  type: varchar(255)
+                  type: varchar(1000)
                   constraints:
                     nullable: false
               - column:
                   name: short_answer
-                  type: varchar(255)
+                  type: varchar(1000)
                   constraints:
                     nullable: false
               - column:

@@ -11,11 +11,14 @@ import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+@CrossOrigin(origins = "http://localhost:3000")
 @Tag(name = "Authentication management", description = "Endpoints for managing authentication")
 @RequiredArgsConstructor
 @RestController
@@ -35,5 +38,19 @@ public class AuthenticationController {
     public UserDto register(@RequestBody @Valid UserRegistrationRequestDto requestDto)
             throws RegistrationException {
         return userService.register(requestDto);
+    }
+
+    @PostMapping("/refresh")
+    @Operation(summary = "Refresh the token", description = "Refresh the JWT token")
+    public UserLoginResponseDto refreshToken(
+            @RequestHeader("Authorization") String authorizationHeader
+    ) {
+        return authenticationService.refreshToken(authorizationHeader);
+    }
+
+    @PostMapping("/logout")
+    @Operation(summary = "Logout", description = "Invalidate the JWT token")
+    public void logout(@RequestHeader("Authorization") String authorizationHeader) {
+        authenticationService.logout(authorizationHeader);
     }
 }

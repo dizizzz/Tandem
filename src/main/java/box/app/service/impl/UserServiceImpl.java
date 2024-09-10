@@ -12,8 +12,6 @@ import box.app.model.user.User;
 import box.app.repository.RoleRepository;
 import box.app.repository.UserRepository;
 import box.app.service.UserService;
-import java.util.HashSet;
-import java.util.Set;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
@@ -41,9 +39,7 @@ public class UserServiceImpl implements UserService {
         Role role = roleRepository.findByName(RoleName.CUSTOMER).orElseThrow(
                 () -> new EntityNotFoundException("Can`t find role by name" + RoleName.CUSTOMER)
         );
-        Set<Role> roles = new HashSet<>();
-        roles.add(role);
-        user.setRoles(roles);
+        user.setRole(role);
 
         User savedUser = userRepository.save(user);
         return userMapper.toDto(savedUser);
@@ -55,13 +51,10 @@ public class UserServiceImpl implements UserService {
         User user = userRepository.findById(id).orElseThrow(
                 () -> new EntityNotFoundException("Can`t find user by id:" + id)
         );
-        Role role = roleRepository.findByName(RoleName.valueOf(roleName)).orElseThrow(
+        Role newRole = roleRepository.findByName(RoleName.valueOf(roleName)).orElseThrow(
                 () -> new EntityNotFoundException("Can`t find role by name" + roleName)
         );
-
-        Set<Role> updatedRoles = new HashSet<>(user.getRoles());
-        updatedRoles.add(role);
-        user.setRoles(updatedRoles);
+        user.setRole(newRole);
 
         return userMapper.toDto(userRepository.save(user));
     }

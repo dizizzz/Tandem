@@ -15,12 +15,15 @@ import org.springframework.stereotype.Component;
 @Component
 public class JwtUnit {
     private final Key secret;
+    private final TokenBlacklistService tokenBlacklistService;
 
     @Value("${jwt.expiration}")
     private long expiration;
 
-    public JwtUnit(@Value("${jwt.secret}") String secretString) {
+    public JwtUnit(@Value("${jwt.secret}") String secretString,
+                   TokenBlacklistService tokenBlacklistService) {
         secret = Keys.hmacShaKeyFor(secretString.getBytes(StandardCharsets.UTF_8));
+        this.tokenBlacklistService = tokenBlacklistService;
     }
 
     public String generateToken(String username) {
@@ -33,6 +36,9 @@ public class JwtUnit {
     }
 
     public boolean isValidToken(String token) {
+        if (tokenBlacklistService.isTokenBlacklisted(token)) {
+            return false;
+        }
         try {
             Jws<Claims> claimsJws = Jwts.parserBuilder()
                     .setSigningKey(secret)
