@@ -1,0 +1,542 @@
+databaseChangeLog:
+  - changeSet:
+      id: insert-question
+      author: solomia
+      changes:
+        - insert:
+            tableName: questions
+            columns:
+              - column:
+                  name: question
+                  value: "ЧИ ПІДХОДИТЬ МЕНІ БОКС, ЯКЩО Я НОВАЧОК І НІКОЛИ НЕ ЗАЙМАВСЯ СПОРТОМ?"
+              - column:
+                  name: short_answer
+                  value: "Безперечно."
+              - column:
+                  name: full_answer
+                  value: "Бокс підходить для початківців, навіть якщо ви ніколи раніше не займалися спортом тому що тренування з боксу легко адаптуються. А це означає, що тренери можуть адаптувати тренування до вашого поточного рівня фізичної підготовки і поступово розвивати ваші навички та витривалість. Починаючи з азів, ви навчитеся правильній техніці, покращите свою фізичну форму та набудете впевненості у власних силах у зручному для вас темпі. Багато людей, які тільки починають займатися фітнесом, вважають бокс чудовим способом привести себе у форму, зняти стрес і розвинути сильне почуття дисципліни та зосередженості. Тож не хвилюйтеся, що ви новачок - бокс може ідеально вам підійти!"
+              - column:
+                  name: language
+                  value: "ukr"
+              - column:
+                  name: is_deleted
+                  value: "0"
+        - insert:
+            tableName: questions
+            columns:
+              - column:
+                  name: question
+                  value: "ЯКИЙ РІВЕНЬ ФІЗИЧНОЇ ПІДГОТОВКИ ПОТРІБЕН ДЛЯ ПОЧАТКУ ТРЕНУВАНЬ?"
+              - column:
+                  name: short_answer
+                  value: "Потрібно Ваше бажання."
+              - column:
+                  name: full_answer
+                  value: "Щоб почати тренування з боксу, вам не потрібно мати високий рівень фізичної підготовки. Початківці часто вітаються, а тренування можуть бути адаптовані до різних рівнів фізичної підготовки. Корисно мати базовий рівень серцево-судинної підготовки та загального фізичного здоров`я, але тренування з боксу самі по собі допоможуть покращити вашу фізичну форму з часом. Ми допоможемо почати з комфортного для вас темпу і поступово нарощувати витривалість і силу в міру прогресу."
+              - column:
+                  name: language
+                  value: "ukr"
+              - column:
+                  name: is_deleted
+                  value: "0"
+        - insert:
+            tableName: questions
+            columns:
+              - column:
+                  name: question
+                  value: "ЧИ Є БОКС НЕБЕЗПЕЧНИМ ВИДОМ СПОРТУ? ЯКІ РИЗИКИ ТРАВМ І ЯК ЇХ УНИКАТИ?"
+              - column:
+                  name: short_answer
+                  value: "Боксом треба займатись с досвідченими тренерами, як наша команда."
+              - column:
+                  name: full_answer
+                  value: "Бокс можна вважати контактним видом спорту з притаманними йому ризиками, але багато з цих ризиків можна контролювати або зменшити за допомогою належних запобіжних заходів.Працюйте з кваліфікованим тренером. Ми поступово навчаємо технікам і кожного тренування вдосконалюємо ваші навички.Кожне тренування починається з розминки для розігріву та підготовки тіла до тренування, щоб запобігти травмам. Та охолодження після кожного тренування.Перед тренуваннями необхідно попередити тренера, якщо ви маєте проблеми зі здоров`ям, щоб тренер міг підібрати безпечні для вас вправи."
+              - column:
+                  name: language
+                  value: "ukr"
+              - column:
+                  name: is_deleted
+                  value: "0"
+        - insert:
+            tableName: questions
+            columns:
+              - column:
+                  name: question
+                  value: "ЧИ МОЖЛИВО ПОЧАТИ ЗАЙМАТИСЬ БОКСОМ В БУДЬ-ЯКОМУ ВІЦІ?"
+              - column:
+                  name: short_answer
+                  value: "Так, боксом можна займатися практично в будь-якому віці."
+              - column:
+                  name: full_answer
+                  value: "Багато людей починають займатися боксом у підлітковому віці, у двадцять років або пізніше. Молоді люди часто починають займатися боксом, щоб покращити фізичну форму, навчитися самообороні або зробити кар`єру спортсмена. Тренування, як правило, спрямовані на розвиток навичок і сили. Дорослі в свою чергу можуть скористатися боксом для покращення фізичної форми, зняття стресу та розвитку навичок. Тренування можуть бути адаптовані до особистого рівня фізичної підготовки та цілей. Та багато людей старшого віку починають займатися боксом через його користь для серцево-судинної системи, координації та загальної фізичної форми. Тренувальні програми для людей похилого віку часто зосереджені на підтримці здоров`я суглобів, гнучкості та уникненні силових вправ."
+              - column:
+                  name: language
+                  value: "ukr"
+              - column:
+                  name: is_deleted
+                  value: "0"
+        - insert:
+            tableName: questions
+            columns:
+              - column:
+                  name: question
+                  value: "ЯК ЧАСТО ПОТРІБНО ТРЕНУВАТИСЯ, ЩОБ ДОСЯГТИ РЕЗУЛЬТАТУ?"
+              - column:
+                  name: short_answer
+                  value: "Для досягнення результатів у боксі частота тренувань може варіюватися залежно від ваших цілей, рівня фізичної підготовки та загального графіка."
+              - column:
+                  name: full_answer
+                  value: "Тренувань 2-3 рази на тиждень часто достатньо, щоб побачити початкові покращення у фізичній формі, техніці та загальному стані.Для розвитку навичок і витривалості зазвичай рекомендується тренуватися 3-5 разів на тиждень. Це дозволяє більш сфокусовано тренуватися на техніці, спарингах і кондиціонуванні.Тренування 5-6 разів на тиждень, або навіть щодня, є звичайною практикою. Це включає в себе поєднання боксерської практики, силових тренувань, кондиціонування та спарингів. Послідовність є ключовим фактором у боксі. Поряд з регулярними тренуваннями, правильний відпочинок, харчування і відновлення мають вирішальне значення для оптимального прогресу і профілактики травм."
+              - column:
+                  name: language
+                  value: "ukr"
+              - column:
+                  name: is_deleted
+                  value: "0"
+        - insert:
+            tableName: questions
+            columns:
+              - column:
+                  name: question
+                  value: "ЧИ ОБОВ`ЯЗКОВО БРАТИ УЧАСТЬ У СПАРИНГАХ АБО ЗМАГАННЯХ?"
+              - column:
+                  name: short_answer
+                  value: "Ні, не обов`язково брати участь у спарингах чи змаганнях, якщо ви цікавитеся боксом. "
+              - column:
+                  name: full_answer
+                  value: "Багато людей займаються боксом виключно для фітнесу, самозахисту або зняття стресу, ніколи не виходячи на ринг для спарингів або змагальних поєдинків.Ви можете зосередитися на покращенні своєї фізичної форми, вивченні техніки та ударах у важкому мішку або рукавицях, не беручи участі у спарингах. Цей підхід все ще пропонує серцево-судинні, силові та координаційні переваги боксу. Якщо ви хочете підняти свої навички на новий рівень, спаринги можуть бути корисними для розвитку таймінгу, рефлексів і глибшого розуміння спорту. Однак це абсолютно необов`язково, і його слід проводити лише тоді, коли ви відчуваєте, що готові, і з належним захисним спорядженням. Змагання - це особистий вибір. Деякі люди вважають корисним перевірити свої навички в контрольованому, конкурентному середовищі, але це не обов`язково для того, щоб отримувати задоволення або користь від боксу.Зрештою, ваші тренування можуть бути адаптовані до ваших цілей, незалежно від того, чи включають вони спаринги, змагання або просто насолоду від тренування."
+              - column:
+                  name: language
+                  value: "ukr"
+              - column:
+                  name: is_deleted
+                  value: "0"
+        - insert:
+            tableName: questions
+            columns:
+              - column:
+                  name: question
+                  value: "ЯК БОКС ВПЛИВАЄ НА ЗДОРОВ`Я? ЧИ Є ПРОТИПОКАЗАННЯ?"
+              - column:
+                  name: short_answer
+                  value: "Бокс має глибокий вплив на здоров`я, пропонуючи численні переваги."
+              - column:
+                  name: full_answer
+                  value: "Бокс - чудове серцево-судинне тренування, що допомагає зміцнити серце, поліпшити кровообіг і підвищити загальну витривалість.Цей вид спорту задіює кілька груп м`язів, особливо у верхній частині тіла, пресі та ногах, що призводить до покращення сили і м`язового тонусу.Бокс спалює велику кількість калорій, що робить його ефективним для схуднення та підтримки здорової ваги тіла. Складні рухи в боксі покращують зорово-моторну координацію, рівновагу та спритність.Бокс може зменшити стрес, покращити настрій та підвищити самооцінку. Зосередженість, необхідна під час тренувань, також загострює розумову ясність і дисципліну.Регулярні тренування розвивають самодисципліну і можуть значно підвищити впевненість у собі, особливо з покращенням навичок і фізичної форми.
+Тим, хто має проблеми з серцем або гіпертонію, слід проконсультуватися з лікарем перед початком занять боксом.
+Також люди з артритом, болем у суглобах або остеопорозом повинні бути обережними через навантаження, яке бокс може спричинити на суглоби та кістки."
+              - column:
+                  name: language
+                  value: "ukr"
+              - column:
+                  name: is_deleted
+                  value: "0"
+        - insert:
+            tableName: questions
+            columns:
+              - column:
+                  name: question
+                  value: "ЯК ШВИДКО МОЖНА НАВЧИТИСЯ ОСНОВНИМ ТЕХНІКАМ І ПРИЙОМАМ?"
+              - column:
+                  name: short_answer
+                  value: "Час, необхідний для вивчення основних прийомів і методів боксу, може варіюватися в залежності від декількох факторів, включаючи ваш попередній досвід, рівень фізичної підготовки і частоту тренувань. "
+              - column:
+                  name: full_answer
+                  value: "Ось загальний огляд:
+1. Початковий етап навчання (4-6 тижнів):
+Базова стійка та робота ніг: Протягом перших кількох тижнів ви навчитеся правильній боксерській стійці, базовій роботі ніг і тому, як ефективно пересуватися на рингу.
+Базові удари: Ви також вивчите основні удари, включаючи джеб, крос, хук та аперкот, а також правильну постановку рук та техніку.
+Техніка захисту: Початківці зазвичай починають з базових захисних рухів, таких як блокування, ковзання та перекати, щоб уникнути ударів.
+2. Нарощування майстерності (2-3 місяці):
+Комбінації: Після освоєння основ, ви почнете практикувати комбінації ударів і навчитеся поєднувати удари з рухами.
+Покращення форми та сили: На цьому етапі ви працюватимете над покращенням швидкості, точності та сили ваших ударів, підтримуючи при цьому хорошу форму.
+Підготовка: Ваша загальна фізична підготовка та витривалість покращиться, коли ви будете включати більш інтенсивні тренування, такі як робота на мішках, тіньовий бокс та робота в рукавицях.
+3. Проміжні техніки (3-6 місяців):
+Просунуті комбінації та робота ніг: Завдяки постійним тренуванням ви почнете вивчати більш складні комбінації та просунуту техніку роботи ніг.
+Спаринги (за бажанням): Якщо ви вирішите спарингувати, в цей період багато боксерів починають легкі спаринги, щоб застосувати вивчене в контрольованому середовищі.
+Стратегія та обізнаність про ринг: Ви також почнете зосереджуватися на стратегії боксу, усвідомленні рингу та розумінні того, як читати суперника.
+Тренування 2-3 рази на тиждень допоможуть вам засвоїти основи протягом першого місяця. Більш часті тренування (3-5 разів на тиждень) прискорять ваш прогрес."
+              - column:
+                  name: language
+                  value: "ukr"
+              - column:
+                  name: is_deleted
+                  value: "0"
+        - insert:
+            tableName: questions
+            columns:
+              - column:
+                  name: question
+                  value: "ЧИ ПІДХОДИТЬ БОКС ДЛЯ СХУДНЕННЯ І ЗАГАЛЬНОЇ ФІЗИЧНОЇ ПІДГОТОВКИ?"
+              - column:
+                  name: short_answer
+                  value: "Бокс дуже добре підходить для схуднення та загальної фізичної підготовки. Він пропонує тренування для всього тіла, що поєднує серцево-судинні вправи, силові тренування та високоінтенсивні інтервальні тренування (HIIT), що робить його ефективним для спалювання калорій та покращення загальної фізичної форми."
+              - column:
+                  name: full_answer
+                  value: "Бокс може спалювати значну кількість калорій, зазвичай від 500 до 800 калорій на годину, залежно від інтенсивності. Це робить його ефективним тренуванням для схуднення у поєднанні зі здоровим харчуванням.Елементи HIIT: Тренування з боксу часто включають HIIT, який відомий тим, що прискорює метаболізм і сприяє втраті жиру навіть після закінчення тренування.Бокс задіює кілька груп м`язів, включаючи руки, ноги, прес і спину, що призводить до більшої витрати калорій і сприяє нарощуванню сухої м`язової маси.Бокс покращує витривалість серцево-судинної системи, допомагаючи зміцнити серце і легені. Регулярні тренування можуть призвести до підвищення витривалості та зниження ризику серцевих захворювань.Поєднання ударів, роботи з ногами та вправ на кондиціонування підвищує загальну силу, м`язовий тонус і витривалість.Бокс вимагає точних рухів і синхронізації, що покращує координацію, спритність і рівновагу. Багато боксерських вправ включають розтяжку і динамічні рухи, які покращують гнучкість і рухливість суглобів.Бокс також корисний для психічного здоров`я, зменшуючи стрес, покращуючи концентрацію уваги та підвищуючи впевненість у собі. Дисципліна і концентрація, необхідні в боксі, можуть призвести до кращої ясності розуму і стійкості.
+Бокс - відмінний вибір для тих, хто хоче схуднути і поліпшити загальну фізичну форму. Він пропонує комплексне тренування, спрямоване на різні аспекти фізичного і психічного здоров`я, що робить його ефективним і приємним способом досягнення фітнес-цілей."
+              - column:
+                  name: language
+                  value: "ukr"
+              - column:
+                  name: is_deleted
+                  value: "0"
+        - insert:
+            tableName: questions
+            columns:
+              - column:
+                  name: question
+                  value: "IS BOXING SUITABLE FOR ME IF I’M A BEGINNER AND HAVE NEVER PLAYED SPORTS?"
+              - column:
+                  name: short_answer
+                  value: "Absolutely."
+              - column:
+                  name: full_answer
+                  value: "Boxing is suitable for beginners, even if you have never played sports before, because boxing training is easily adaptable. This means that trainers can adapt workouts to your current fitness level and gradually develop your skills and endurance.  Starting from the basics, you`ll learn  proper techniques, improve your fitness, and build confidence at your own pace. Many people who are new to fitness find boxing to be a great way to get into shape, relieve stress, and develop a strong sense of discipline and focus. So, don't worry about being a beginner-boxing can be a perfect fit for you!"
+              - column:
+                  name: language
+                  value: "eng"
+              - column:
+                  name: is_deleted
+                  value: "0"
+        - insert:
+            tableName: questions
+            columns:
+              - column:
+                  name: question
+                  value: "WHAT LEVEL OF FITNESS IS REQUIRED TO START TRAINING?"
+              - column:
+                  name: short_answer
+                  value: "Your wish is needed."
+              - column:
+                  name: full_answer
+                  value: "You don`t need to have a high level of fitness to start boxing training. Beginners are often welcome and the workouts can be adapted to suit different fitness levels. It`s helpful to have a basic level of cardiovascular fitness and general physical health, but boxing training alone will help improve your fitness over time. We`ll help you start at a pace that`s comfortable for you and gradually build your endurance and strength as you progress."
+              - column:
+                  name: language
+                  value: "eng"
+              - column:
+                  name: is_deleted
+                  value: "0"
+        - insert:
+            tableName: questions
+            columns:
+              - column:
+                  name: question
+                  value: "IS BOXING A ANGEROUS SPORT? WHAT ARE THE RISK OF INJURY AND HOW TO AVOID THEM?"
+              - column:
+                  name: short_answer
+                  value: "Boxing should be done with experienced coaches like our team."
+              - column:
+                  name: full_answer
+                  value: "Boxing can be considered a contact sport with inherent risks, but many of these risks can be controlled or reduced with proper precautions.Work with a qualified trainer. We gradually teach techniques and improve your skills every training session.Each training session begins with a warm-up to warm up and prepare your body for the workout to prevent injury. And a cool-down after each workout.Before training, you should inform your trainer if you have any health problems so that the trainer can choose exercises that are safe for you."
+              - column:
+                  name: language
+                  value: "eng"
+              - column:
+                  name: is_deleted
+                  value: "0"
+        - insert:
+            tableName: questions
+            columns:
+              - column:
+                  name: question
+                  value: "IS IT POSSIBLE TO START BOXING AT ANY AGE?"
+              - column:
+                  name: short_answer
+                  value: "Yes, boxing can be done at almost any age. "
+              - column:
+                  name: full_answer
+                  value: "Many people begin boxing in their teens, twenties, or later in life. Young individuals may take up boxing to enhance their physical fitness, learn self-defense, or pursue a career as an athlete. Training typically focuses on skill development and building strength. On the other hand, adults may use boxing to improve fitness, alleviate stress, and hone their skills. Workouts can be customized based on individual fitness levels and objectives. Notably, an increasing number of older individuals are embracing boxing due to its cardiovascular, coordination, and overall fitness advantages. Training programs for seniors often emphasize the maintenance of joint health, flexibility, and the avoidance of strenuous exercises."
+              - column:
+                  name: language
+                  value: "eng"
+              - column:
+                  name: is_deleted
+                  value: "0"
+        - insert:
+            tableName: questions
+            columns:
+              - column:
+                  name: question
+                  value: "HOW OFTEN DO YOU NEED TO TRAIN TO ACHIEVE RESULTS?"
+              - column:
+                  name: short_answer
+                  value: "To achieve results in boxing, the frequency of training can vary depending on your goals, fitness level and overall schedule. "
+              - column:
+                  name: full_answer
+                  value: "Training 2-3 times a week is often enough to see initial improvements in fitness, technique, and overall condition. For skill development and endurance, training 3-5 times a week is usually recommended. This allows for more focused training on technique, sparring, and conditioning. Training 5-6 times a week, or even daily, is a common practice. This includes a combination of boxing practice, strength training, conditioning, and sparring. Consistency is key in boxing. Along with regular training, proper rest, nutrition, and recovery are crucial for optimal progress and injury prevention."
+              - column:
+                  name: language
+                  value: "eng"
+              - column:
+                  name: is_deleted
+                  value: "0"
+        - insert:
+            tableName: questions
+            columns:
+              - column:
+                  name: question
+                  value: "IS IT NECESSARY TO PARTICIPATE IN SPARRING OR COMPETITIONS?"
+              - column:
+                  name: short_answer
+                  value: "No, it is not necessary to participate in sparring or competitions if you`re interested in boxing. "
+              - column:
+                  name: full_answer
+                  value: "Many people take up boxing for fitness, self-defense, or stress relief without ever sparring or competing. You can focus on improving fitness, learning technique, and hitting a heavy bag or gloves without sparring. This approach still provides the cardiovascular, strength, and coordination benefits of boxing. If you want to advance your skills, sparring can help develop timing, reflexes, and a deeper understanding of the sport. However, it`s optional and should only be done when you feel ready and with proper protective equipment. Competing is a personal choice. Some people find it helpful to test their skills in a controlled, competitive environment, but it`s not necessary to enjoy or benefit from boxing. Ultimately, your training can be tailored to your goals, whether they include sparring, competition, or simply enjoying your workout.."
+              - column:
+                  name: language
+                  value: "eng"
+              - column:
+                  name: is_deleted
+                  value: "0"
+        - insert:
+            tableName: questions
+            columns:
+              - column:
+                  name: question
+                  value: "HOW DOES BOXING AFFECT HEALTH? ARE THERE ANY CONTRAINDICATIONS?"
+              - column:
+                  name: short_answer
+                  value: "Boxing has a profound impact on health, offering numerous benefits."
+              - column:
+                  name: full_answer
+                  value: "Boxing is a fantastic cardiovascular workout that helps strengthen the heart, improve circulation, and increase overall endurance. The sport engages several muscle groups, especially in the upper body, abs, and legs, resulting in improved strength and muscle tone. Boxing burns a large number of calories, making it effective for weight loss and maintaining a healthy body weight. The complex movements in boxing improve hand-eye coordination, balance, and agility. Additionally, boxing can reduce stress, improve mood, and boost self-esteem. The concentration required during training also sharpens mental clarity and discipline. Regular training develops self-discipline and can significantly increase self-confidence, especially as skills and fitness improve. Individuals with heart problems or hypertension should consult a doctor before taking up boxing. Also, people with arthritis, joint pain, or osteoporosis should be careful because of the stress that boxing can put on joints and bones."
+              - column:
+                  name: language
+                  value: "eng"
+              - column:
+                  name: is_deleted
+                  value: "0"
+        - insert:
+            tableName: questions
+            columns:
+              - column:
+                  name: question
+                  value: "HOW QUICKLY CAN I LEARN THE BASIC TECHNIQUES AND METHODS?"
+              - column:
+                  name: short_answer
+                  value: "The time it takes to learn basic boxing techniques and methods can vary depending on several factors, including your previous experience, fitness level and frequency of training. "
+              - column:
+                  name: full_answer
+                  value: "Here is a general overview:
+1. The initial stage of training (4-6 weeks):
+Basic stance and footwork: During the first few weeks, you will learn the correct boxing stance, basic footwork and how to move effectively in the ring.
+Basic Punching: You will also learn the basic punches, including the jab, cross, hook and uppercut, as well as proper hand placement and technique.
+Defence techniques: Beginners usually start with basic defensive moves such as blocking, sliding and rolling to avoid being hit.
+
+2. Skill building (2-3 months):
+Combinations: Once you have mastered the basics, you will begin to practice combinations of punches and learn to combine punches with movements.
+Improving form and strength: In this phase, you will work on improving the speed, accuracy and power of your strokes while maintaining good form.
+Preparation: Your overall fitness and stamina will improve as you incorporate more intense training such as bag work, shadow boxing and glove work.
+
+3. Intermediate techniques (3-6 months):
+Advanced combinations and footwork: Through constant training, you will begin to learn more complex combinations and advanced footwork.
+Sparring (optional): If you decide to spar, many boxers begin light sparring during this period to apply what they have learned in a controlled environment.
+Strategy and ring awareness: You will also begin to focus on boxing strategy, ring awareness and understanding how to read your opponent.
+Training 2-3 times a week will help you learn the basics during the first month. More frequent training (3-5 times a week) will accelerate your progress.
+"
+              - column:
+                  name: language
+                  value: "eng"
+              - column:
+                  name: is_deleted
+                  value: "0"
+        - insert:
+            tableName: questions
+            columns:
+              - column:
+                  name: question
+                  value: "IS BOXING SUITABLE FOR WEIGHT LOSS AND GENERAL FITNESS?"
+              - column:
+                  name: short_answer
+                  value: "Boxing is great for weight loss and general fitness. It offers a full-body workout that combines cardiovascular exercise, strength training, and high-intensity interval training (HIIT), making it effective for burning calories and improving overall fitness."
+              - column:
+                  name: full_answer
+                  value: "Boxing can burn a significant amount of calories, typically between 500 and 800 calories per hour, depending on the intensity. This makes it an effective weight loss workout when combined with a healthy diet. HIIT elements: Boxing workouts often incorporate HIIT, which is known for boosting metabolism and promoting fat loss even after the workout is over. Boxing engages multiple muscle groups, including the arms, legs, abs and back, which results in a higher calorie burn and helps build lean muscle mass. Boxing improves cardiovascular endurance by helping to strengthen the heart and lungs. Regular training can lead to increased endurance and a reduced risk of heart disease. A combination of punching, footwork and conditioning exercises increases overall strength, muscle tone and endurance. Boxing requires precise movements and synchronisation, which improves coordination, agility and balance. Many boxing exercises include stretching and dynamic movements that improve joint flexibility and mobility. Boxing is also good for mental health, reducing stress, improving concentration and boosting self-confidence. The discipline and concentration required in boxing can lead to better mental clarity and resilience.
+Boxing is a great choice for those looking to lose weight and improve their overall fitness. It offers a comprehensive workout that targets various aspects of physical and mental health, making it an effective and enjoyable way to achieve fitness goals."
+              - column:
+                  name: language
+                  value: "eng"
+              - column:
+                  name: is_deleted
+                  value: "0"
+        - insert:
+            tableName: questions
+            columns:
+              - column:
+                  name: question
+                  value: "Ist Boxen für mich geeignet, wenn ich Anfänger bin und noch nie Sport gemacht habe?"
+              - column:
+                  name: short_answer
+                  value: "Unbedingt."
+              - column:
+                  name: full_answer
+                  value: "Boxen ist für Anfänger geeignet, auch wenn Sie noch nie Sport getrieben haben, denn das Boxtraining ist leicht anpassbar. Das bedeutet, dass die Trainer das Training an Ihr aktuelles Fitnessniveau anpassen und Ihre Fähigkeiten und Ausdauer schrittweise entwickeln können. Beginnend mit den Grundlagen lernen Sie die richtige Technik, verbessern Ihre Fitness und gewinnen Selbstvertrauen in Ihrem eigenen Tempo. Viele Menschen, die gerade erst mit dem Fitnesssport beginnen, finden, dass Boxen eine großartige Möglichkeit ist, um fit zu werden, Stress abzubauen und einen starken Sinn für Disziplin und Konzentration zu entwickeln. Machen Sie sich also keine Sorgen, wenn Sie ein Anfänger sind - Boxen könnte perfekt für Sie sein!"
+              - column:
+                  name: language
+                  value: "deu"
+              - column:
+                  name: is_deleted
+                  value: "0"
+        - insert:
+            tableName: questions
+            columns:
+              - column:
+                  name: question
+                  value: "Welches Fitnesslevel ist erforderlich, um mit dem Training zu beginnen?"
+              - column:
+                  name: short_answer
+                  value: "Ihr Wunsch ist erforderlich."
+              - column:
+                  name: full_answer
+                  value: "Man muss kein hohes Fitnessniveau haben, um mit dem Boxtraining zu beginnen. Anfänger sind oft willkommen, und die Workouts können an verschiedene Fitnesslevel angepasst werden. Es ist hilfreich, ein grundlegendes Maß an kardiovaskulärer Fitness und allgemeiner körperlicher Gesundheit zu haben, aber das Boxtraining selbst wird Ihre Fitness im Laufe der Zeit verbessern. Wir helfen Ihnen, in einem Tempo zu beginnen, das für Sie angenehm ist, und Ihre Ausdauer und Kraft schrittweise zu steigern, während Sie Fortschritte machen."
+              - column:
+                  name: language
+                  value: "deu"
+              - column:
+                  name: is_deleted
+                  value: "0"
+        - insert:
+            tableName: questions
+            columns:
+              - column:
+                  name: question
+                  value: "Ist Boxen ein gefährlicher Sport? Welche Verletzungsrisiken gibt es und wie kann man sie vermeiden?"
+              - column:
+                  name: short_answer
+                  value: "Boxen sollte mit erfahrenen Trainern wie unserem Team durchgeführt werden."
+              - column:
+                  name: full_answer
+                  value: "Boxen kann als Kontaktsport betrachtet werden, der gewisse Risiken mit sich bringt, doch viele dieser Risiken können durch entsprechende Vorsichtsmaßnahmen kontrolliert oder verringert werden.Arbeiten Sie mit einem qualifizierten Trainer zusammen. Wir lehren Ihnen schrittweise Techniken und verbessern Ihre Fähigkeiten bei jedem Training.Jede Trainingseinheit beginnt mit einem Aufwärmen, um Ihren Körper auf das Training vorzubereiten und Verletzungen zu vermeiden. Und nach jedem Training erfolgt ein Cool-Down.Vor dem Training sollten Sie Ihren Trainer über etwaige gesundheitliche Probleme informieren, damit er Übungen auswählen kann, die für Sie sicher sind."
+              - column:
+                  name: language
+                  value: "deu"
+              - column:
+                  name: is_deleted
+                  value: "0"
+        - insert:
+            tableName: questions
+            columns:
+              - column:
+                  name: question
+                  value: "Kann man in jedem Alter mit dem Boxen anfangen?"
+              - column:
+                  name: short_answer
+                  value: "Ja, Boxen kann in fast jedem Alter ausgeübt werden."
+              - column:
+                  name: full_answer
+                  value: "Viele Menschen beginnen mit dem Boxen im Teenageralter, in den Zwanzigern oder später. Junge Menschen beginnen oft mit dem Boxen, um ihre körperliche Fitness zu verbessern, Selbstverteidigung zu lernen oder eine Karriere als Sportler zu verfolgen. Das Training zielt in der Regel auf die Entwicklung von Fähigkeiten und Kraft ab. Erwachsene wiederum können mit Boxen ihre Fitness verbessern, Stress abbauen und ihre Fähigkeiten weiterentwickeln. Die Trainingseinheiten können auf das persönliche Fitnessniveau und die persönlichen Ziele zugeschnitten werden. Viele ältere Menschen beginnen jedoch mit dem Boxen, weil es das Herz-Kreislauf-System, die Koordination und die allgemeine Fitness fördert. Trainingsprogramme für Senioren konzentrieren sich häufig auf die Erhaltung der Gelenkgesundheit und der Flexibilität und vermeiden Kraftübungen."
+              - column:
+                  name: language
+                  value: "deu"
+              - column:
+                  name: is_deleted
+                  value: "0"
+        - insert:
+            tableName: questions
+            columns:
+              - column:
+                  name: question
+                  value: "Wie oft muss man trainieren, um Ergebnisse zu erzielen?"
+              - column:
+                  name: short_answer
+                  value: "Um im Boxen Ergebnisse zu erzielen, kann die Trainingshäufigkeit je nach Zielen, Fitnessniveau und allgemeinem Zeitplan variieren. "
+              - column:
+                  name: full_answer
+                  value: "2-3 Mal pro Woche zu trainieren, reicht oft aus, um erste Verbesserungen bei Fitness, Technik und allgemeiner Kondition zu erzielen. Für die Entwicklung von Fähigkeiten und Ausdauer wird in der Regel ein Training von 3-5 Mal pro Woche empfohlen. Dies ermöglicht ein gezielteres Training von Technik, Sparring und Kondition. 5-6 Mal pro Woche oder sogar tägliches Training ist eine gängige Praxis. Dies beinhaltet eine Kombination aus Boxtraining, Krafttraining, Konditionierung und Sparring. Beständigkeit ist beim Boxen der Schlüssel. Neben regelmäßigem Training sind richtige Ruhe, Ernährung und Erholung entscheidend für optimale Fortschritte und die Vermeidung von Verletzungen."
+              - column:
+                  name: language
+                  value: "deu"
+              - column:
+                  name: is_deleted
+                  value: "0"
+        - insert:
+            tableName: questions
+            columns:
+              - column:
+                  name: question
+                  value: "Ist es notwendig, an Sparring oder Wettkämpfen teilzunehmen?"
+              - column:
+                  name: short_answer
+                  value: "Nein, es ist nicht notwendig, an Sparring oder Wettkämpfen teilzunehmen, wenn Sie sich für Boxen interessieren. "
+              - column:
+                  name: full_answer
+                  value: "Viele Menschen beginnen mit dem Boxen zu Fitnesszwecken, zur Selbstverteidigung oder zum Stressabbau, ohne jemals Sparring oder Wettkämpfe zu bestreiten. Sie können sich auf die Verbesserung der Fitness, das Erlernen von Techniken und das Schlagen eines schweren Sacks oder Handschuhs konzentrieren, ohne zu sparren. Dieser Ansatz bietet dennoch die Vorteile des Boxens in Bezug auf Herz-Kreislauf-System, Kraft und Koordination. Wenn Sie Ihre Fähigkeiten verbessern möchten, kann Sparring helfen, Timing, Reflexe und ein tieferes Verständnis für den Sport zu entwickeln. Es ist jedoch optional und sollte nur dann durchgeführt werden, wenn Sie sich dazu bereit fühlen und mit der richtigen Schutzausrüstung. Wettkämpfe sind eine persönliche Entscheidung. Manche Menschen finden es hilfreich, ihre Fähigkeiten in einem kontrollierten, wettbewerbsorientierten Umfeld zu testen, aber es ist nicht notwendig, um Spaß am Boxen zu haben oder davon zu profitieren. Letztendlich können Sie Ihr Training auf Ihre Ziele abstimmen, egal ob Sie Sparring, Wettkämpfe oder einfach nur Spaß an Ihrem Training haben wollen."
+              - column:
+                  name: language
+                  value: "deu"
+              - column:
+                  name: is_deleted
+                  value: "0"
+        - insert:
+            tableName: questions
+            columns:
+              - column:
+                  name: question
+                  value: "Wie wirkt sich Boxen auf die Gesundheit aus? Gibt es irgendwelche Gegenanzeigen?"
+              - column:
+                  name: short_answer
+                  value: "Boxen hat einen tiefgreifenden Einfluss auf die Gesundheit und bietet zahlreiche Vorteile."
+              - column:
+                  name: full_answer
+                  value: "Boxen ist ein fantastisches Herz-Kreislauf-Training, das das Herz stärkt, den Kreislauf verbessert und die allgemeine Ausdauer erhöht. Der Sport beansprucht mehrere Muskelgruppen, vor allem im Oberkörper, in den Bauchmuskeln und in den Beinen, was zu einer Verbesserung der Kraft und des Muskeltonus führt. Beim Boxen wird eine große Anzahl von Kalorien verbrannt, so dass es effektiv zur Gewichtsabnahme und zur Erhaltung eines gesunden Körpergewichts beiträgt. Die komplexen Bewegungen beim Boxen verbessern die Hand-Augen-Koordination, das Gleichgewicht und die Beweglichkeit. Außerdem kann Boxen Stress abbauen, die Stimmung verbessern und das Selbstwertgefühl steigern. Die beim Training erforderliche Konzentration schärft auch die geistige Klarheit und Disziplin. Regelmäßiges Training fördert die Selbstdisziplin und kann das Selbstvertrauen erheblich steigern, vor allem wenn sich Fähigkeiten und Fitness verbessern.
+
+Personen mit Herzproblemen oder Bluthochdruck sollten einen Arzt konsultieren, bevor sie mit dem Boxen beginnen. Auch Menschen mit Arthritis, Gelenkschmerzen oder Osteoporose sollten wegen der Belastung, die das Boxen auf Gelenke und Knochen ausüben kann, vorsichtig sein."
+              - column:
+                  name: language
+                  value: "deu"
+              - column:
+                  name: is_deleted
+                  value: "0"
+        - insert:
+            tableName: questions
+            columns:
+              - column:
+                  name: question
+                  value: "Wie schnell kann ich die grundlegenden Techniken und Methoden erlernen?"
+              - column:
+                  name: short_answer
+                  value: "Die Zeit, die benötigt wird, um grundlegende Boxtechniken und -methoden zu erlernen, kann je nach verschiedenen Faktoren variieren, darunter Ihre Vorerfahrung, Ihr Fitnesslevel und die Häufigkeit des Trainings. Hier ist ein allgemeiner "
+              - column:
+                  name: full_answer
+                  value: "Überblick:
+1.Die Anfangsphase des Trainings (4-6 Wochen):
+Grundstellung und Beinarbeit: In den ersten Wochen lernen Sie die richtige Boxhaltung, die grundlegende Beinarbeit und wie Sie sich effektiv im Ring bewegen.
+Grundschläge: Sie werden auch die grundlegenden Schläge erlernen, darunter den Jab, Cross, Haken und Uppercut, sowie die richtige Handplatzierung und Technik.
+Verteidigungstechniken: Anfänger beginnen in der Regel mit einfachen Verteidigungsbewegungen wie Blocken, Ausweichen und Rollen, um Schlägen zu entgehen.
+
+2.Fähigkeitenaufbau (2-3 Monate):
+Kombinationen: Sobald Sie die Grundlagen beherrschen, beginnen Sie, Schlagkombinationen zu üben und lernen, Schläge mit Bewegungen zu kombinieren.
+Form- und Kraftverbesserung: In dieser Phase arbeiten Sie daran, die Geschwindigkeit, Genauigkeit und Kraft Ihrer Schläge zu verbessern, während Sie eine gute Form beibehalten.
+Konditionierung: Ihre allgemeine Fitness und Ausdauer werden sich verbessern, da Sie intensiveres Training wie Sandsackarbeit, Schattenboxen und Partnerübungen integrieren.
+
+3.Fortgeschrittene Techniken (3-6 Monate): Fortgeschrittene Kombinationen und Beinarbeit: Durch kontinuierliches Training werden Sie beginnen, komplexere Kombinationen und fortgeschrittene Beinarbeit zu lernen.
+Sparring (optional): Wenn Sie sich entscheiden, zu sparren, beginnen viele Boxer in diesem Zeitraum mit leichtem Sparring, um das Gelernte in einer kontrollierten Umgebung anzuwenden.
+Strategie und Ringbewusstsein: Sie werden sich auch auf Boxstrategien, Ringbewusstsein und das Lesen Ihres Gegners konzentrieren.
+Ein Training von 2-3 Mal pro Woche wird Ihnen helfen, die Grundlagen im ersten Monat zu erlernen. Häufigeres Training (3-5 Mal pro Woche) wird Ihren Fortschritt beschleunigen."
+              - column:
+                  name: language
+                  value: "deu"
+              - column:
+                  name: is_deleted
+                  value: "0"
+        - insert:
+            tableName: questions
+            columns:
+              - column:
+                  name: question
+                  value: "Ist Boxen für Gewichtsabnahme und allgemeine Fitness geeignet?"
+              - column:
+                  name: short_answer
+                  value: "Boxen ist großartig für den Gewichtsverlust und die allgemeine Fitness. Es bietet ein Ganzkörpertraining, das kardiovaskuläre Übungen, Krafttraining und hochintensives Intervalltraining (HIIT) kombiniert, was es effektiv macht, um Kalorien zu verbrennen und die allgemeine Fitness zu verbessern."
+              - column:
+                  name: full_answer
+                  value: "Boxen kann eine erhebliche Menge an Kalorien verbrennen, typischerweise zwischen 500 und 800 Kalorien pro Stunde, je nach Intensität. Dies macht es zu einem effektiven Training zum Abnehmen, wenn es mit einer gesunden Ernährung kombiniert wird. HIIT-Elemente: Box-Workouts beinhalten oft HIIT, das dafür bekannt ist, den Stoffwechsel anzukurbeln und den Fettabbau auch nach dem Training zu fördern. Boxen beansprucht mehrere Muskelgruppen, einschließlich Arme, Beine, Bauch und Rücken, was zu einem höheren Kalorienverbrauch führt und den Aufbau von schlanker Muskelmasse fördert. Boxen verbessert die kardiovaskuläre Ausdauer, indem es hilft, das Herz und die Lungen zu stärken. Regelmäßiges Training kann zu einer erhöhten Ausdauer und einem reduzierten Risiko für Herzerkrankungen führen. Eine Kombination aus Schlägen, Beinarbeit und Konditionsübungen steigert die allgemeine Kraft, den Muskeltonus und die Ausdauer. Boxen erfordert präzise Bewegungen und Synchronisation, was die Koordination, Agilität und das Gleichgewicht verbessert. Viele Boxübungen beinhalten Dehnungen und dynamische Bewegungen, die die Gelenkflexibilität und Beweglichkeit verbessern. Boxen ist auch gut für die geistige Gesundheit, da es Stress reduziert, die Konzentration verbessert und das Selbstvertrauen stärkt. Die Disziplin und Konzentration, die beim Boxen erforderlich sind, können zu besserer geistiger Klarheit und Widerstandsfähigkeit führen.
+Boxen ist eine ausgezeichnete Wahl für diejenigen, die abnehmen und ihre allgemeine Fitness verbessern möchten. Es bietet ein umfassendes Training, das verschiedene Aspekte der körperlichen und geistigen Gesundheit anspricht und so zu einem effektiven und unterhaltsamen Weg wird, um Fitnessziele zu erreichen."
+              - column:
+                  name: language
+                  value: "deu"
+              - column:
+                  name: is_deleted
+                  value: "0"
+
