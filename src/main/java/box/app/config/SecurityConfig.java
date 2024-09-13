@@ -42,7 +42,8 @@ public class SecurityConfig {
                                         "/v3/api-docs/**",
                                         "/questions/eng",
                                         "/questions/ukr",
-                                        "/questions/deu"
+                                        "/questions/deu",
+                                        "/messages"
                                 )
                                 .permitAll()
                                 .anyRequest()
