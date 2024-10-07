@@ -13,6 +13,4 @@ public interface UserService {
     UserDto updateRoleById(Long id, UserUpdateRequestDto requestDto);
 
     UserDto getInfo(User authUser);
-
-    UserDto updateInfo(User updateUser, UserRegistrationRequestDto requestDto);
 }
