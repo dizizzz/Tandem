@@ -1,7 +1,6 @@
 package box.app.controller;
 
 import box.app.dto.user.UserDto;
-import box.app.dto.user.UserRegistrationRequestDto;
 import box.app.dto.user.UserUpdateRequestDto;
 import box.app.model.user.User;
 import box.app.service.UserService;
@@ -35,21 +34,10 @@ public class UserController {
         return userService.updateRoleById(id, requestDto);
     }
 
-    @PreAuthorize("hasRole('CUSTOMER')")
     @GetMapping("/me")
     @Operation(summary = "Get user`s profile info", description = "Get user`s profile info")
     public UserDto getInfo(Authentication authentication) {
         User user = (User) authentication.getPrincipal();
         return userService.getInfo(user);
     }
-
-    @PreAuthorize("hasRole('CUSTOMER')")
-    @PutMapping("/me")
-    @Operation(summary = "Update user`s profile info", description = "Update user`s profile info")
-    public UserDto updateInfo(Authentication authentication,
-                              @RequestBody UserRegistrationRequestDto requestDto) {
-        User user = (User) authentication.getPrincipal();
-        return userService.updateInfo(user, requestDto);
-    }
-
 }

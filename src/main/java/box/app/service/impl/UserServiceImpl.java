@@ -66,14 +66,4 @@ public class UserServiceImpl implements UserService {
         );
         return userMapper.toDto(user);
     }
-
-    @Override
-    public UserDto updateInfo(User updateUser,
-                              UserRegistrationRequestDto requestDto) {
-        updateUser.setEmail(requestDto.getEmail());
-        updateUser.setPassword(requestDto.getPassword());
-        updateUser.setFirstName(requestDto.getFirstName());
-        updateUser.setLastName(requestDto.getLastName());
-        return userMapper.toDto(userRepository.save(updateUser));
-    }
 }
