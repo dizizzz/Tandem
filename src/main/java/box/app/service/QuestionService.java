@@ -8,15 +8,11 @@ import org.springframework.data.domain.Pageable;
 public interface QuestionService {
     QuestionDto add(QuestionRequestDto requestDto);
 
-    List<QuestionDto> findAll(Pageable pageable);
-
     List<QuestionDto> findAllEngQuestions(Pageable pageable);
 
     List<QuestionDto> findAllUkrQuestions(Pageable pageable);
 
     List<QuestionDto> findAllDeuQuestions(Pageable pageable);
-
-    QuestionDto getById(Long id);
 
     QuestionDto updateById(Long id, QuestionRequestDto requestDto);
 

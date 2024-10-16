@@ -27,13 +27,6 @@ public class QuestionServiceImpl implements QuestionService {
     }
 
     @Override
-    public List<QuestionDto> findAll(Pageable pageable) {
-        return repository.findAll(pageable).stream()
-                .map(questionMapper::toDto)
-                .toList();
-    }
-
-    @Override
     public List<QuestionDto> findAllEngQuestions(Pageable pageable) {
         return repository.findByLanguage(Language.eng, pageable).stream()
                 .map(questionMapper::toDto)
@@ -52,13 +45,6 @@ public class QuestionServiceImpl implements QuestionService {
         return repository.findByLanguage(Language.deu, pageable).stream()
                 .map(questionMapper::toDto)
                 .collect(Collectors.toList());
-    }
-
-    @Override
-    public QuestionDto getById(Long id) {
-        Question question = repository.findById(id).orElseThrow(
-                () -> new EntityNotFoundException("Can`t find question by id " + id));
-        return questionMapper.toDto(question);
     }
 
     @Override
