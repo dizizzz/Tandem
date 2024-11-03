@@ -48,8 +48,8 @@ public class CustomOAuth2SuccessHandler extends SimpleUrlAuthenticationSuccessHa
 
     private String determineRedirectUrl(User user) {
         if (user.getRole().getName().equals(RoleName.ADMIN)) {
-            return "http://localhost:3000/#/admin";
+            return "https://tandem.netlify.app/#/admin";
         }
-        return "http://localhost:3000/#/profile";
+        return "https://tandem.netlify.app/#/profile";
     }
 }
