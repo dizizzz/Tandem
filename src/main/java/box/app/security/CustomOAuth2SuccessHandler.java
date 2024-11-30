@@ -4,7 +4,7 @@ import box.app.exception.EntityNotFoundException;
 import box.app.model.user.RoleName;
 import box.app.model.user.User;
 import box.app.repository.UserRepository;
-import jakarta.servlet.http.Cookie;
+import box.app.service.impl.RedisTokenService;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
@@ -19,6 +19,7 @@ import org.springframework.stereotype.Component;
 public class CustomOAuth2SuccessHandler extends SimpleUrlAuthenticationSuccessHandler {
     private final JwtUnit jwtUnit;
     private final UserRepository userRepository;
+    private final RedisTokenService redisTokenService;
 
     @Override
     public void onAuthenticationSuccess(HttpServletRequest request, HttpServletResponse response,
@@ -27,29 +28,22 @@ public class CustomOAuth2SuccessHandler extends SimpleUrlAuthenticationSuccessHa
 
         String email = oauth2User.getAttribute("email");
 
-        String token = jwtUnit.generateToken(email);
-
-        Cookie cookie = new Cookie("accessToken", token);
-        cookie.setHttpOnly(false);
-        cookie.setSecure(true);
-        cookie.setPath("/");
-        cookie.setMaxAge(24 * 60 * 60);
-        response.addCookie(cookie);
-
         User user = userRepository.findByEmail(email).orElseThrow(
                 () -> new EntityNotFoundException(
                         "Can`t find user by email " + email
                 )
         );
 
-        String redirectUrl = determineRedirectUrl(user);
+        String tempToken = redisTokenService.getToken(email);
+
+        String redirectUrl = determineRedirectUrl(user, tempToken);
         response.sendRedirect(redirectUrl);
     }
 
-    private String determineRedirectUrl(User user) {
+    private String determineRedirectUrl(User user, String tempToken) {
         if (user.getRole().getName().equals(RoleName.ADMIN)) {
-            return "https://tandem.netlify.app/#/admin";
+            return "https://tandem.netlify.app/#/admin?token=" + tempToken;
         }
-        return "https://tandem.netlify.app/#/profile";
+        return "https://tandem.netlify.app/#/profile?token=" + tempToken;
     }
 }
