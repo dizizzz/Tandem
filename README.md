@@ -97,8 +97,8 @@ Ensure that a MySQL database is created with the specified database name in the 
 
 **Edit application.properties**:
 ```properties
-spring.security.oauth2.client.registration.google.client-id=${SPRING_SECURITY_OAUTH2_CLIENT_REGISTRATION_GOOGLE_CLIENT_ID}
-spring.security.oauth2.client.registration.google.client-secret=${SPRING_SECURITY_OAUTH2_CLIENT_REGISTRATION_GOOGLE_CLIENT_SECRET}
+spring.security.oauth2.client.registration.google.client-id=client.registration_google_client_id
+spring.security.oauth2.client.registration.google.client-secret=client.registration_google_client_secret
 spring.security.oauth2.client.registration.google.redirect-uri=http://localhost:8080/login/oauth2/code/google
 spring.security.oauth2.client.registration.google.scope=profile, email
 spring.security.oauth2.client.registration.google.client-name=Google
@@ -106,9 +106,9 @@ spring.security.oauth2.client.registration.google.client-name=Google
 ```
 **Edit Redis Configuration:**
 ```plaintext
-spring.data.redis.host=${REDIS_HOST}
-spring.data.redis.port=${REDIS_PORT}
-spring.data.redis.password=${REDIS_PASSWORD}
+spring.data.redis.host=redis_host
+spring.data.redis.port=redis_port
+spring.data.redis.password=redis_password
 spring.data.redis.ssl.enabled=true
 ```
 Ensure that a Redis database is created with the specified database name in the configuration file.
