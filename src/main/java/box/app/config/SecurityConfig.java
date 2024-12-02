@@ -52,7 +52,8 @@ public class SecurityConfig {
                                         "/questions/eng",
                                         "/questions/ukr",
                                         "/questions/deu",
-                                        "/messages"
+                                        "/messages",
+                                        "/token/validate/**"
                                 )
                                 .permitAll()
                                 .anyRequest()
