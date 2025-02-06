@@ -1,4 +1,4 @@
-# Box Club Management System 🥊
+# Tandem - Box Club Management System 🥊
 Welcome to the Box Club Management System! This project is designed to simplify and enhance the management of boxing club activities.
 
 ## 📋 Table of Contents
